@@ -24,7 +24,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	payment = S * (P + (P / (Math.pow(1 + P, n) - 1)));
 	fullPayment = payment * countMonths;
 
-	return fullPayment.toFixed(2) / 1;
-	/* Так как метод "toFixed()" возвращает строку,
-	 то для того, чтобы преобразовать переменную fullPayment в значение числового типа, оно делится на 1 */
+	return Number(fullPayment.toFixed(2));
 }
